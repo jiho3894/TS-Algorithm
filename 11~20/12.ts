@@ -8,7 +8,7 @@
 파이어볼
 */
 
-const Wizard = class Wizard {
+class Wizard {
   health: number;
   mana: number;
   armor: number;
