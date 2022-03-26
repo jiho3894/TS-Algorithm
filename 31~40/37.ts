@@ -4,13 +4,13 @@
 그런데 표를 하나씩 개표하는 과정이 너무 번거롭게 느껴진 당신은 **학생들이 뽑은 후보들을 입력받으면 뽑힌 학생의 이름과 받은 표 수를 출력하는 프로그램**을 
 작성하기로 하였습니다. */
 
-interface obj {
+interface obj37 {
   [key: string]: number;
 }
 
 const t37 = (n: string) => {
   const r = n.split(" ");
-  const o: obj = {};
+  const o: obj37 = {};
   let winner = "";
   for (let i in r) {
     let val: string = r[i];
