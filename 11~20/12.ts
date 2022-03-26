@@ -17,7 +17,7 @@ class Wizard {
     this.mana = mana;
     this.armor = armor;
   }
-
+ 
   attack() {
     console.log("파이어볼");
   }
