@@ -4,11 +4,13 @@
 
 const t1 = () => {
   let nums = [100, 200, 300, 400, 500];
-  
-  console.log(nums.slice(0,3))
+  let result = nums.slice(0, 3);
+  console.log(result);
   /* or
-  nums.pop() * 2
+  nums.pop()
+  nums.pop()
+  console.log(nums)
   */
-}
+};
 
-t1()
+t1();

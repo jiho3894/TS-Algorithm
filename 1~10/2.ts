@@ -12,9 +12,9 @@ console.log(arr);
 */
 
 const t2 = () => {
-  let arr = [200,100,300]
-  arr.splice(2,0,10000)
-  console.log(arr)
-}
+  let arr = [200, 100, 300];
+  arr.splice(2, 0, 10000); /* start,delete,input */
+  console.log(arr);
+};
 
-t2()
+t2();

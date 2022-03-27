@@ -9,9 +9,22 @@ const t9 = () => {
   let hour = "11";
   let minute = "34";
   let second = "27";
-  let result = `${year}/${month}/${day} ${hour}:${minute}:${second}`;
-
-  console.log(result);
+  /* 템플릿 리터럴(Template Literal) */
+  let result1 = `${year}/${month}/${day} ${hour}:${minute}:${second}`;
+  let result2 = year.concat(
+    "/",
+    month,
+    "/",
+    day,
+    " ",
+    hour,
+    ":",
+    minute,
+    ":",
+    second
+  );
+  console.log(result1);
+  console.log(result2);
 };
 
 t9();

@@ -10,6 +10,7 @@ const t18 = (n: number[]) => {
   for (let i in n) {
     sum += n[i];
   }
+  /* 소수점 자리 버리기 */
   console.log(Math.floor(sum / 3));
 };
 

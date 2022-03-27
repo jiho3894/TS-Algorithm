@@ -6,9 +6,11 @@
 출력
 545 210 10
 파이어볼
+
+class 표현식
 */
 
-const Wizard = class Wizard {
+class Wizard {
   health: number;
   mana: number;
   armor: number;

@@ -16,11 +16,11 @@ const t5 = () => {
   let a = 10;
   let b = 2;
 
-  for (var i = 1; i < 5; i += 2) {
+  for (let i = 1; i < 5; i += 2) {
     a += i;
   }
 
   console.log(a + b);
 };
 
-t5();  /* 16 */
+t5(); /* 16 */

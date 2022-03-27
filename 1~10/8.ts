@@ -12,7 +12,7 @@ const t8 = () => {
     eyesight: 1,
   };
 
-  console.log(d["weight"]);
+  console.log(d.weight);
 };
 
 t8();
