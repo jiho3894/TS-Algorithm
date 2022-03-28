@@ -7,7 +7,7 @@ console.log(typeof(arr));
 1)  undefined
 2)  string
 3)  number
-4)  object  => 정답
+4)  object  => 정답 ex) number[] 알아볼
 */
 
 const t3 = () => {
@@ -15,4 +15,4 @@ const t3 = () => {
   console.log(typeof arr);
 };
 
-t3()
+t3();
