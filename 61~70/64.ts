@@ -13,6 +13,25 @@
 가장 적게 옮길 수 있는 횟수를 출력합니다.
 만약 어떻게 해도 정량이 N이 되지 않는다면 -1을 출력합니다. */
 
-const t64 = () => {};
+const t64 = (n: number) => {
+  let num = 0;
+  let c = 0;
+  while (num <= n) {
+    if (num + 7 <= n) {
+      num += 7;
+      c += 1;
+    } else if (num + 3 <= n) {
+      num += 3;
+      c += 1;
+    } else {
+      break;
+    }
+  }
+  if (num === n) {
+    console.log(c);
+  } else {
+    console.log(-1);
+  }
+};
 
-t64();
+t64(27);

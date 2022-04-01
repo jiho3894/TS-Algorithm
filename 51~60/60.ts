@@ -38,7 +38,7 @@ const t60 = () => {
   ];
   students.sort();
   console.log(students);
-  for (let i in students) {
+  for (let i = 0; i < students.length; i++) {
     console.log(`번호: ${Number(i) + 1}, 이름: ${students[i]}`);
   }
 };
