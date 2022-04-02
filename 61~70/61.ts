@@ -14,9 +14,9 @@ const t61 = (n: string) => {
   let c = 1;
   for (let i = 0; i < r.length; i++) {
     if (r[i] === r[i + 1]) {
-      c += 1;
+      c += 1;  /* 뒤에값과 같으면 a1 , a2 이런식으로 숫자 올리기 */
     } else {
-      s.push(r[i] + c);
+      s.push(r[i] + c); /* 만들어진 a3값을 s변수에 넣기 */
       c = 1;
     }
     console.log(c);

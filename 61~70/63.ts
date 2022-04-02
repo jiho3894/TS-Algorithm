@@ -16,7 +16,7 @@ const t63 = (n: string) => {
   let r = n.split(" ");
   let s = "";
   for (let i in r) {
-    s += r[i].split("")[0];
+    s += r[i].split("")[0]; /* 띄어쓰기마다 잘라서 맨 앞자리 s에 넣기 */
   }
   console.log(s);
 };

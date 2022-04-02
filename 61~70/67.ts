@@ -26,8 +26,8 @@
 const t67 = (n: number) => {
   let sum = 0;
   let c = 1;
-  let result = [];
   while (n > sum) {
+    /* 숫자마다 증가하다가 n값보다 넘어가면 break */
     sum += c;
     if (n < sum) {
       sum -= c;

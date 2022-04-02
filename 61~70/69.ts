@@ -15,24 +15,27 @@
 
 const t69 = (n: number) => {
   let prime: number[] = [];
-  let isPrime = true;
+  let bolPrime = true;
 
   for (let i = 2; i < n; i++) {
     for (let j = 2; j < i; j++) {
       if (i % j == 0) {
-        isPrime = false;
+        bolPrime = false;
       }
     }
-    if (isPrime) {
+    if (bolPrime) {
       prime.push(i);
     }
-    isPrime = true;
+    bolPrime = true;
   }
+  /* 이 부분까지 해당 n보다 작은 소수들을 prime 배열에 넣어둠 */
   console.log(prime);
   let result: number[][] = [];
   prime.map((num, index) => {
+    /* 첫번째 숫자부터 n값을 빼고 나온값이 prime배열에 존재하는지 확인하고 그 값을 출력 */
     let sum = prime.indexOf(n - num);
     if (sum !== -1 && prime[sum] < prime[index]) {
+      /* ex) [3,53] , [53,3]도 같은 덧셈이라 0index가 작은값만 넣기 */
       result.push([prime[sum], prime[index]]);
     }
   });

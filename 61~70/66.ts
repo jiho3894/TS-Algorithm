@@ -26,12 +26,14 @@ const t66 = (arr: string[], rule: string) => {
   let rules = rule.split("");
   let result = [];
   for (let i in arr) {
-    let s = [];
+    let s = []; /* 매 단어 검색하다 stack 초기화 */
     for (let j in rules) {
       if (arr[i].indexOf(rules[j]) !== -1) {
-        s.push(arr[i].indexOf(rules[j]));
+        /* ABD의 값이 존재하면 stack에 index값 넣어주기 */
+        s.push(arr[i].indexOf(rules[j])); /* 몇번째 값인지 확인 */
       }
     }
+    console.log(s);
     result.push(test(s));
   }
   console.log(result);
@@ -39,6 +41,7 @@ const t66 = (arr: string[], rule: string) => {
 
 const test = (s: number[]) => {
   for (let i = 0; i < s.length; i++) {
+    /* 해당 index값의 순서가 올바른지 확인하는 함수 */
     if (s[i] > s[i + 1]) {
       return "불가능";
     }

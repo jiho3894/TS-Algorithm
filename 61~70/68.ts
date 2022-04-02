@@ -18,21 +18,25 @@
 */
 
 const t68 = (time: string[], n: string) => {
-  let numTime: string[][] = [];
+  let numTime: string[][] = []; /* 이중배열로 ":"값을 나눈 새로운 값을 넣어둠 */
   let sumTime = [];
   time.map((data) => {
     numTime.push(data.split(":"));
   });
-  let arrive = n.split(":");
-  let liveTime = Number(arrive[0]) * 60 + Number(arrive[1]);
+  let arrive = n.split(":"); /* 도착한 시간 값도 나누기 */
+  let liveTime =
+    Number(arrive[0]) * 60 +
+    Number(
+      arrive[1]
+    ); /* 나눈 0index는 시간이니까 *60 1index는 분이니까 그대로 더하기 */
   for (let i in numTime) {
     let hours = Number(numTime[i][0]) * 60;
     let minute = Number(numTime[i][1]);
-    sumTime.push(hours + minute);
+    sumTime.push(hours + minute); /* 시간표값들도 전부 분으로 바꾸기 */
   }
   let result: string[] = [];
   sumTime.forEach((t) => {
-    let missTime = t - liveTime;
+    let missTime = t - liveTime; /* 시간 차 확인하기 */
     if (missTime < 0) {
       result.push("지나갔습니다");
     } else if (missTime > 60) {
