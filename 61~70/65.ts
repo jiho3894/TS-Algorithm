@@ -6,7 +6,7 @@ b = [a, b, c, d]
 
 const t65 = () => {
   const a = [1, 2, 3, 4];
-  const b: string[] = ["a", "b", "c", "d"];
+  const b: string[] = ["a", "b", "c", "d" ,"e"];
   /* 이중배열안에 string과 number가 동시에 존재함 (string | number) => 숫자or문자열 [][] => 이중배열 */
   let s: (string | number)[][] = [];
 
