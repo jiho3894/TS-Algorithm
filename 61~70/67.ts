@@ -24,17 +24,19 @@
 */
 
 const t67 = (n: number) => {
-  let sum = 0;
-  let c = 1;
+  let sum = 0; /* 더해지는값 */
+  let c = 1; /* 인원 수*/
   while (n > sum) {
     /* 숫자마다 증가하다가 n값보다 넘어가면 break */
     sum += c;
+    console.log(sum);
     if (n < sum) {
       sum -= c;
       break;
     } else {
       c++;
     }
+    console.log(c);
   }
   console.log([n - sum, c + 1]);
 };
